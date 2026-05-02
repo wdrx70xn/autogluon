@@ -8,6 +8,7 @@ runs:
   steps:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
+      continue-on-error: true
       with:
         role-to-assume: arn:aws:iam::369469875935:role/AutoGluonCloudCIRole
         role-duration-seconds: 7200
